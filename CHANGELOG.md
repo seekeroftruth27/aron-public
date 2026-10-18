@@ -1,5 +1,26 @@
 # Changelog
 
+## [v2.12.0] — 2026-10-12
+
+### Added
+- **The session record, for looking back after a service.** From the first
+  Start Listening the page keeps a record and the server writes it to
+  `recordings/session-<date>_<time>/` (`session.json` + `session.html`) every
+  few seconds: the settings at the start and every change after, with its time
+  and old/new value; listening on/off, service mode and Clear; the model ids
+  in use (Soniox STT, each extra ear's model, the Router's model, translator
+  default, hearing fallback, pins, latency, usage, spend); and every row with
+  its seal time, source language, each extra ear's reading (marked where the
+  translator was given it), who translated it (Soniox or the model id), the
+  Router's reason, scores and check time, Soniox's English when a model
+  replaced it, the translator's voice tag, prompt-cache use, hand edits,
+  errors, and spoken → shown time. Clear empties the screen, not the record.
+  `session.html` opens from disk with filters (Router rows, model rows, ears,
+  edits, errors) and the settings changes in line. **⭳ HTML** now downloads
+  that page, and a speech recording's save and `.zip` carry both files.
+  `CT_SESSION_SAVE=0` keeps it off disk. Each extra ear now names its model.
+
+
 ## [v2.11.3] — 2026-10-11
 
 ### Changed
