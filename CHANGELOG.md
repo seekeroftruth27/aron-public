@@ -1,5 +1,30 @@
 # Changelog
 
+## [v2.12.1] — 2026-10-18
+
+### Fixed
+- **Captions after a song no longer start mid-sentence.** The music gate now
+  reopens after about 1–1.5 s of speech instead of ~4.5 s, and the last 2 s of
+  audio heard while it was closed is sent first when it reopens, so the
+  speaker's opening words are transcribed. On the eight song-to-speech moments
+  of a real service, every first caption now starts a sentence or more earlier.
+- **An extra ear running behind no longer feeds the translator the previous
+  line.** A reading that matches an earlier line better than the current one
+  is dropped. On a real service this removed about ten wrong captions (a
+  "foolish" turned into "wise", a lost "not") and changed no correct one.
+- **Soniox is reconnected when it stops punctuating.** A long-running stream
+  can stop adding punctuation for the rest of a service, which leaves nothing
+  to cut captions on and doubles the delay on the wall. After 30 words with no
+  punctuation the stream is finalized and reopened; no words are lost across
+  the switch.
+- **A dropped Soniox connection no longer loses what was said meanwhile.** The
+  last 20 s of audio is kept, and anything not yet transcribed is sent again on
+  the new connection.
+
+### Changed
+- **Auto-standby after 3 hours idle instead of 10 minutes.** A long choir set
+  had stopped listening in the middle of a service.
+
 ## [v2.12.0] — 2026-10-12
 
 ### Added
