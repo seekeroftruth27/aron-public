@@ -1,5 +1,50 @@
 # Changelog
 
+## [v2.13.0] — 2026-10-22
+
+### Added
+- **Web captions carry their language.** Each caption sent to the website relay
+  now says which language it was translated into (`"lang": "ro"`, `"en"`), and
+  the relay (`web/captions/publish.php`) stores it with the line. A bilingual
+  website can show each of its language versions only its own captions, e.g.
+  the Romanian translation of an English speaker on the Romanian pages and the
+  English translation of a Romanian speaker on the English ones. Seam fixes and
+  hand edits keep the line's language. Viewers that ignore the field work as
+  before; update `publish.php` on the host to store it.
+- **Router "Send on at" slider** (default 30%, was a fixed 50%): how doubtful a
+  Soniox line must be before it is translated again. At 30% about a quarter of
+  a sermon's lines are sent on, the extra ones mostly literal Scripture.
+- **gpt-6-sol on the standard tier** in the Model menu: half the fast tier's
+  price, about a quarter of a second slower a caption.
+
+### Changed
+- **Fewer stray full stops mid-sentence.** Soniox's endpoint is fixed at 3 s
+  instead of following the Pace's pause; at 1.3 s it closed a sentence at
+  nearly every breath. Stray full stops dropped from about 26 to 5 on a
+  measured stretch, with no added delay at the median.
+- **Soniox's own translation drops hesitations** ("Uh, he comes…").
+- **The seam rule** (drop a full stop the next caption continues) now also runs
+  on Router captions, and **quotation marks** are balanced across captions on
+  every path: one style per language, stray closers dropped, an opener left
+  unclosed after 60 words taken back out.
+- **The punctuation watchdog waits for 40 unpunctuated words** (was 30), since
+  the longer endpoint makes healthy runs longer.
+- **The glossary keeps only the names.** The idioms and regional words are
+  dropped: today's translators know them unaided. About 1,000 tokens off every
+  translator call; prompt caching is unaffected.
+- **Sonnet 5.5 runs with thinking off** by default: no better at low effort on
+  a new context battery, no faster, and it once left a caption blank.
+
+### Fixed
+- **Bilingual services: lines no longer go out untranslated after a language
+  switch.** The direction is now judged from each packet's own words,
+  tentative ones included; before, most packets arrived with no language and
+  kept the old direction. On two replayed windows of a real service, wrong-way
+  lines went from 1 and 4 to 0.
+- **No coarse idioms on the church screen.** A clean source is no longer turned
+  into a soft swear ("don't give a damn"); Scripture's judgment language
+  (damnation, condemned, hell) keeps its full weight.
+
 ## [v2.12.1] — 2026-10-18
 
 ### Fixed
@@ -44,7 +89,6 @@
   edits, errors) and the settings changes in line. **⭳ HTML** now downloads
   that page, and a speech recording's save and `.zip` carry both files.
   `CT_SESSION_SAVE=0` keeps it off disk. Each extra ear now names its model.
-
 
 ## [v2.11.3] — 2026-10-11
 
