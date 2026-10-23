@@ -21,7 +21,7 @@ own API keys. Nobody sits in between.
 | **Built for church** | Scripture-aware translation, waits for whole sentences instead of fragments, catches mis-hears and uncouth expressions, projector caption strip, ProPresenter, phone captions via QR code. |
 | **Licence** | Free to use, MIT licensed. |
 
-**[⬇ Download the latest release](../../releases/latest)** · **[Website](https://seekeroftruth27.github.io/aron-public/)** · **[Quick start](QUICKSTART.md)**
+**[⬇ Download the latest release](../../releases/latest)** · **[Website](https://arontranslate.com/)** · **[Quick start](QUICKSTART.md)**
 
 ---
 
