@@ -3,11 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Áron — free live translation for church</title>
-<meta name="description" content="Free software for live sermon translation and captions. Bring your own keys to top professional speech and AI models and pay their list price, from about $0.15 an hour.">
+<title>Free Church Translation Software — Live Sermon Captions | Áron</title>
+<meta name="description" content="Áron (Aron) is free software for live church translation: sermon captions on the screen, in ProPresenter and on phones, in 60+ languages. No subscription. Bring your own keys and pay the providers directly, from about $0.15 an hour.">
+<link rel="canonical" href="https://seekeroftruth27.github.io/aron-public/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seekeroftruth27.github.io/aron-public/">
+<meta property="og:site_name" content="Áron">
 <meta property="og:title" content="Áron — free live translation for church">
-<meta property="og:description" content="The best models, without the middleman. The software is free; you pay the model providers directly, from about $0.15 an hour.">
-<meta property="og:image" content="img/operator.png">
+<meta property="og:description" content="The best translation models, without the middleman. The software is free; you pay the providers directly, from about $0.15 an hour.">
+<meta property="og:image" content="https://seekeroftruth27.github.io/aron-public/img/operator.png">
+<meta property="og:image:width" content="2040">
+<meta property="og:image:height" content="982">
+<meta property="og:image:alt" content="Áron operator screen: a Romanian sermon captioned live in English">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Áron — free live translation for church">
+<meta name="twitter:description" content="The best translation models, without the middleman. Free software, from about $0.15 an hour.">
+<meta name="twitter:image" content="https://seekeroftruth27.github.io/aron-public/img/operator.png">
+<meta name="theme-color" content="#0d0f14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0f14'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23e8b85c'%3E%C3%81%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Áron",
+  "alternateName": ["Aron", "Áron church translation"],
+  "description": "Free software for live church translation: speech in 60+ languages captioned live on the screen, in ProPresenter and on phones, with optional spoken translation.",
+  "url": "https://seekeroftruth27.github.io/aron-public/",
+  "downloadUrl": "https://github.com/seekeroftruth27/aron-public/releases/latest",
+  "image": "https://seekeroftruth27.github.io/aron-public/img/operator.png",
+  "screenshot": ["https://seekeroftruth27.github.io/aron-public/img/operator.png", "https://seekeroftruth27.github.io/aron-public/img/projector.png", "https://seekeroftruth27.github.io/aron-public/img/phone.png"],
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true,
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "sameAs": ["https://github.com/seekeroftruth27/aron-public"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -125,6 +158,14 @@ section{padding:80px 0}
 .step code{background:var(--bg2);padding:2px 6px;border-radius:6px;font-size:13px}
 @media (max-width:820px){.steps{grid-template-columns:1fr}}
 
+.faq{max-width:780px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 22px}
+.faq summary{cursor:pointer;list-style:none;font-weight:600;padding:16px 28px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:12px;font-size:22px;color:var(--gold);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--mute);font-size:15px;padding:0 0 18px}
+
 /* closing */
 .closing{text-align:center;padding:100px 0 80px}
 .closing blockquote{font-family:Fraunces,serif;font-size:clamp(22px,3vw,30px);max-width:760px;margin:0 auto 10px;line-height:1.35}
@@ -146,6 +187,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="links">
     <a class="hide-sm" href="#cost">Cost</a>
     <a class="hide-sm" href="#how">How it works</a>
+    <a class="hide-sm" href="#faq">FAQ</a>
     <a class="hide-sm" href="https://github.com/seekeroftruth27/aron-public">GitHub</a>
     <a class="btn primary sm" href="https://github.com/seekeroftruth27/aron-public/releases/latest">Download</a>
   </div>
@@ -256,6 +298,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </div></section>
 
+<section id="faq"><div class="wrap">
+  <div class="sec-head rv"><h2>Questions churches ask</h2></div>
+  <div class="faq">
+    <details class="rv"><summary>Is Áron really free?</summary><p>Yes. The software is free and MIT licensed. You only pay the speech and AI providers for what you use, at their own published prices, and you're billed by them directly. Most churches start with a single Soniox key at about $0.15 per hour of speech.</p></details>
+    <details class="rv"><summary>What languages does it translate?</summary><p>It recognizes 60+ spoken languages automatically and captions into any of about 29 target languages, including English, Spanish, Romanian, Portuguese, Korean, Chinese, Russian and Ukrainian. For a bilingual service it switches direction by itself when the speaker changes language.</p></details>
+    <details class="rv"><summary>Does it work with ProPresenter?</summary><p>Yes. Point a ProPresenter web object at Áron's caption strip, or let Áron send the live translation into a ProPresenter message. There's also a plain full-screen caption page for any projector.</p></details>
+    <details class="rv"><summary>Can people follow on their phones?</summary><p>Yes. Áron can stream captions, and optionally the spoken translation, to a page on your church's website. Put a QR code in the bulletin and people read along in the room or from home.</p></details>
+    <details class="rv"><summary>What do we need to run it?</summary><p>A Windows 10 or 11 computer with an internet connection and an audio feed from your sound desk or a microphone. All the heavy work runs in the cloud, so you don't need a powerful machine or any special hardware.</p></details>
+    <details class="rv"><summary>How is this different from paid church translation services?</summary><p>Many paid services are built on the same kind of cloud speech and AI models and charge a subscription or per-minute rate on top. Áron lets you use the best models directly, at their own price, with nobody in between.</p></details>
+  </div>
+</div></section>
+
 <div class="closing"><div class="wrap rv">
   <blockquote>Let everyone in the room hear the sermon.</blockquote>
   <cite>Free for every church, in every language.</cite>
@@ -266,7 +320,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></div>
 
 <footer><div class="wrap">
-  <span>Áron · free live translation for churches · MIT licensed</span>
+  <span>Áron (Aron) · free church translation software · MIT licensed</span>
   <a href="https://github.com/seekeroftruth27/aron-public">github.com/seekeroftruth27/aron-public</a>
 </div></footer>
 
