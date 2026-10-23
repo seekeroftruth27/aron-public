@@ -1,7 +1,31 @@
-# Áron — live any-language captions
+# Áron — free live translation for church services
+
+**The best translation models. Without the middleman.**
 
 > "He shall speak for you to the people, and he shall be your mouth,"
 > Exodus 4:16
+
+**Live sermon translation and captions, without a subscription.** Áron listens
+to whoever is speaking, in any of 60+ languages, and captions it live in your
+congregation's language: on the main screen, in ProPresenter, or on people's
+phones. It can also speak the translation aloud.
+
+You pay the speech and AI services directly, at their list prices, with your
+own API keys. Nobody sits in between.
+
+| | |
+|---|---|
+| **Cost** | About **$0.15 an hour** with just a Soniox key. Router, Claude retranslation and Soniox voice together come to about $1.60 per hour of speech. |
+| **Setup** | One Windows `.exe`. Paste one key into a text file and double-click. No install, no account with us. |
+| **Languages** | Any of 60+ spoken languages, auto-detected, into any of ~29 target languages. Bilingual services flip direction automatically. |
+| **Built for church** | Scripture-aware translation, waits for whole sentences instead of fragments, catches mis-hears and uncouth expressions, projector caption strip, ProPresenter, phone captions via QR code. |
+| **Licence** | Free to use, MIT licensed. |
+
+**[⬇ Download the latest release](../../releases/latest)** · **[Website](https://seekeroftruth27.github.io/aron-public/)** · **[Quick start](QUICKSTART.md)**
+
+---
+
+## How it works
 
 Real-time speech translation for a church service. Speech is captured,
 transcribed, translated, and shown as **live captions**. The operator picks
@@ -190,8 +214,8 @@ the app behaves exactly as before.
 
 If ProPresenter drives your auditorium screen, point a ProPresenter **web
 object** at Áron's own caption strip at `http://<operator-ip>:5000/projector` —
-it renders the full typewriter reveal, the rolling window, and dimmed older
-sentences. Size and place it for a lower-third with the `CT_PROJECTOR_*` knobs
+it renders the full typewriter reveal and the rolling window.
+Size and place it for a lower-third with the `CT_PROJECTOR_*` knobs
 in `.env.example`. If your ProPresenter can't host a web object, Áron can
 instead push the live translation into a ProPresenter **Message** over its local
 network API (`CT_PROPRESENTER_*`). Both are documented in `.env.example`.
