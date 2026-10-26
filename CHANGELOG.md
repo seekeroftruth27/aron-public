@@ -1,5 +1,27 @@
 # Changelog
 
+## [v2.14.0] — 2026-10-25
+
+### Added
+- **Web captions carry their source and timing, for a website's video archive.**
+  Each caption sent to the relay now also carries the words it translates
+  (`src`) and when the first of them was spoken (`t`, epoch ms). Seam fixes and
+  hand edits keep both. A website can line a service's recording up with them,
+  for a better transcript of the original language and subtitles from the live
+  translation.
+- **The relay keeps the whole service.** Its store still holds only the last
+  `MAX_SEGS` lines for viewers, but every line, and every later fix of one, is
+  also appended to `archive/live/<epoch>.jsonl` (inside the protected archive
+  folder). **Clear** moves it into the service's archive folder as
+  `transcript.jsonl`, so an archived service is no longer cut to its last 200
+  lines.
+
+### Changed
+- **`feed.php` leaves `src` and `t` out**, so phone viewers don't download the
+  source text on every poll.
+
+Update `publish.php` and `feed.php` on the host to use these.
+
 ## [v2.13.0] — 2026-10-22
 
 ### Added
