@@ -1,5 +1,28 @@
 # Changelog
 
+## [v2.15.0] — 2026-10-25
+
+### Added
+- **Captions in up to 150 languages.** The language menu is no longer the 29
+  every voice could speak. What a Model can caption was measured on a real
+  sermon passage, judged by two other model families: gpt-6-sol writes 150
+  languages (138 naturally, among them S'gaw Karen, Hmong, Burmese, Amharic,
+  Tigrinya, Haitian Creole, Tok Pisin), gemini-3.5-flash-lite 126,
+  claude-haiku-4-5 62, and "none, fast"
+  all 60 Soniox hears. A Model not yet measured keeps the 29.
+- **The menu says what each language gets**: languages the chosen Model cannot
+  write are greyed under "With another Model", naming the ones that can;
+  an asterisk marks a language Soniox does not translate into ("* Target not
+  supported by Soniox translation: use a more capable Model"), which is also
+  one-way (no bilingual pair, no Router); **no voice** marks one the chosen voice
+  cannot speak (it is captioned and not spoken). A search box finds a language.
+- A Model that cannot write the picked language is greyed in the Model menu.
+- **Wall typing at 6, 7, 8 and 9 words a second**, between 5 and 10.
+
+### Changed
+- "Chinese" is now **Chinese (Simplified)**, beside **Chinese (Traditional)**.
+
+
 ## [v2.14.0] — 2026-10-25
 
 ### Added

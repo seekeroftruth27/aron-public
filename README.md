@@ -6,7 +6,7 @@
 > Exodus 4:16
 
 **Live sermon translation and captions, without a subscription.** Áron listens
-to whoever is speaking, in any of 60+ languages, and captions it live in your
+to whoever is speaking, in any of 60 languages, and captions it live in your
 congregation's language: on the main screen, in ProPresenter, or on people's
 phones. It can also speak the translation aloud.
 
@@ -17,7 +17,7 @@ own API keys. Nobody sits in between.
 |---|---|
 | **Cost** | About **$0.15 an hour** with just a Soniox key. Router, Claude retranslation and Soniox voice together come to about $1.60 per hour of speech. |
 | **Setup** | One Windows `.exe`. Paste one key into a text file and double-click. No install, no account with us. |
-| **Languages** | Any of 60+ spoken languages, auto-detected, into any of ~29 target languages. Bilingual services flip direction automatically. |
+| **Languages** | Any of 60 spoken languages, auto-detected. Captions in all 60 with just a Soniox key, or up to 150 with GPT-6 Sol (an OpenAI key). Bilingual services flip direction automatically. [Full tables](https://arontranslate.com/#languages). |
 | **Built for church** | Scripture-aware translation, waits for whole sentences instead of fragments, catches mis-hears and uncouth expressions, projector caption strip, ProPresenter, phone captions via QR code. |
 | **Licence** | Free to use, MIT licensed. |
 
@@ -29,10 +29,10 @@ own API keys. Nobody sits in between.
 
 Real-time speech translation for a church service. Speech is captured,
 transcribed, translated, and shown as **live captions**. The operator picks
-**one target language** — any of ~29 supported languages — and Soniox
-auto-detects whatever language is actually being spoken, so any speaker in any
-supported language gets captioned into that single chosen target, with
-optional spoken output.
+**one target language** — up to 150, depending on the translator chosen — and
+Soniox auto-detects whatever language is actually being spoken (any of its 60),
+so any speaker gets captioned into that single chosen target, with optional
+spoken output where the chosen voice speaks that language.
 
 Everything runs in the **cloud** — there are no local models to install and no
 special hardware. The app ships as a **single Windows `.exe`** that needs no
