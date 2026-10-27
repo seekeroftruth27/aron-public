@@ -1,5 +1,44 @@
 # Changelog
 
+## [v2.16.0] — 2026-10-27
+
+### Added
+- **Projector text menus: lines and size.** Two new menus set how many lines
+  the wall keeps (2 or 3) and the text size (85-130% of the screen's
+  default). They travel with the Wall pace, so a projector on another machine
+  follows them, and a lower line count retires the extra lines at once.
+  `CT_PROJECTOR_LINES` sets the default. The five projector menus now sit in
+  an even two-column grid.
+- **Signed Windows exe.** The release build signs `church-translate.exe` with
+  Azure Artifact Signing, so Windows names the publisher instead of warning
+  "Unknown publisher" (SmartScreen still builds reputation as the signed exe
+  is downloaded). Setup and the variables it needs: `docs/code-signing.md`;
+  without them a build stays unsigned.
+- **Stream voice** (ElevenLabs v4 and v4 Turbo, a box beside Expression): the
+  whole service is read as one continuous speech over one open connection,
+  instead of one clip per caption. Captions are about five words, and as
+  separate clips each started and ended like its own little speech, with a
+  breath and the same falling tone every time. Replayed at the real timing of
+  20 captions from a service, it speaks about 0.3 s later than separate clips
+  (median 2.1 s against 1.8 s from caption to voice). While the voice runs
+  behind the captions, sentences are held for the next caption, so the voice
+  reads them with more of what follows (the room is still hearing older audio,
+  so the wait costs nothing). Stability does not apply in this mode.
+- **gpt-6.1-terra (fast tier) in the Model picker** (`gpt-6.1-terra-fast`):
+  OpenAI's new model, released 2026-10-26, on the fast tier with reasoning off. It
+  matches gpt-6-sol on Romanian idioms and on repairing mis-heard words at
+  half the price (about what Sol costs on the standard tier), and is about
+  0.1 s slower to the first word than Sol on the fast tier. It captions
+  **145 languages** (127 naturally), measured the same way as gpt-6-sol:
+  5 fewer than Sol (Chuukese, Hakha Chin, Dhivehi, Kachin, Marshallese and
+  K'iche' are Sol only), one more (Asturian).
+- **gpt-6.1-terra on the standard tier** too, beside the fast tier: the
+  same model at half the price, a little slower to the first word.
+
+### Changed
+- The "Send on at" slider is now called **Router threshold**.
+
+
 ## [v2.15.0] — 2026-10-25
 
 ### Added
