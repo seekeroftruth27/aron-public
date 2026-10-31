@@ -1,5 +1,46 @@
 # Changelog
 
+## [v2.17.0] — 2026-10-31
+
+### Changed
+- **A new look for the operator page.** Night blue and gold, as on the website.
+  Across the top, a light for each link in the pipe: Mic, Soniox, the Decision
+  Router, the translator (with its prompt-cache ring), the voice, the projector,
+  and Web while web captions are on. Grey is idle, green working, orange worth
+  a look, red broken; each light's tooltip has its stage's state and timings,
+  and a translator falling behind shows its backlog on its light. Then the
+  estimated spend, Download, Diagnostics, Help and light/dark.
+- **One row of controls** for a service: Start/Stop, the languages, **Mic**,
+  **Speak**, Project, Clear wall and **Settings**. Mic replaces the
+  Speaking/Music indicator: it mutes the pipeline for music, and Gate music
+  presses it by itself (keys 1 and 2 still work). Keyboard shortcuts are in
+  the tooltips.
+- **Settings in one drawer** (Listen, Translate, Wall, Voice) instead of the
+  three stage panels, with a short note under each setting. Under the
+  controls, a small level meter and what Pace, Voice and Wall are set to;
+  each opens Settings at its section.
+- **The Router is now the Decision Router**, and sits under the Model. Its
+  doubt threshold is `CT_ROUTER_THRESHOLD` in `.env` (the slider is gone),
+  default **0.3**.
+- **The voice is one menu**: Soniox v2, ElevenLabs v4 or ElevenLabs v4 Turbo.
+  Stream (on), Expression (off), Stability (50%) and Tighten pauses (on) moved
+  to `.env` (`CT_EL_STREAM`, `CT_EL_EXPRESSION`, `CT_EL_STABILITY`,
+  `CT_SX_TIGHTEN`). Prices are on the website now, not in the menu.
+- **Wall text size follows the lines**: 3 lines is the standard size, 2 lines a
+  little larger. The size menu is gone.
+- Pace offers Pronto, Moderato and Lento; a saved Soniox stop opens as Pronto.
+- gemini-3.6-flash + audio left the Model menu; `CT_GEMINI_AUDIO=1` brings it back.
+- The Wait for ears slider is gone; `CT_EAR_WAIT_MS` (default 0.7 s) sets it.
+- The quick start guide shows the new layout.
+
+### Fixed
+- **The Decision Router's clue no longer reaches the screen.** A model that
+  copied the clue sent with a doubted line (Soniox's English and why it was
+  doubted) into its reply had it shown, spoken and published; the clue is now
+  cut out first, on every model, and the cut is logged in Diagnostics and the
+  session record.
+- The translator's light now follows the Decision Router's calls.
+
 ## [v2.16.0] — 2026-10-27
 
 ### Added
